@@ -1,0 +1,72 @@
+{
+  "akiec": {
+    "full_name": "Actinic Keratosis",
+    "severity": "Medium - Precancerous",
+    "description": "Actinic Keratosis (AK), also known as solar keratosis, is a rough, scaly growth that develops on sun-exposed skin. These lesions are precancerous and can potentially develop into squamous cell carcinoma if left untreated.",
+    "causes": "Caused by prolonged and repeated sun exposure over many years. Fair-skinned individuals and those who spend significant time outdoors are at higher risk.",
+    "symptoms": "Rough, scaly bumps that may itch or sting. Often skin-colored, red, pink, or brown. Typically appear on face, ears, scalp, forearms, and other sun-exposed areas.",
+    "treatment": "Medical treatments include cryotherapy (freezing), topical medications (imiquimod, 5-fluorouracil), chemical peels, laser therapy, and photodynamic therapy. Prevention through sun protection is crucial.",
+    "prevention": "Use broad-spectrum sunscreen (SPF 30+), wear protective clothing, limit sun exposure, especially between 10 AM and 4 PM.",
+    "disclaimer": "⚠️ This analysis is for informational purposes only. Do NOT panic. Early detection and professional treatment have excellent outcomes. Consult a board-certified dermatologist immediately for proper diagnosis and treatment options."
+  },
+  "bcc": {
+    "full_name": "Basal Cell Carcinoma",
+    "severity": "High - Skin Cancer (Most Common)",
+    "description": "Basal Cell Carcinoma (BCC) is the most common type of skin cancer, originating from basal cells in the epidermis. While it rarely spreads to other parts of the body, early treatment is important to prevent local tissue damage.",
+    "causes": "Primarily caused by excessive sun exposure and UV radiation. Also associated with fair skin, genetic predisposition, and previous skin cancer history.",
+    "symptoms": "Waxy, pearly nodule with visible blood vessels. May have a central ulceration or bleeding center. Often painless but may be itchy or bleed easily. Typically appears on face, neck, and shoulders.",
+    "treatment": "Surgical excision, Mohs micrographic surgery (most effective), curettage and electrodessication, laser therapy, cryotherapy, or topical medications (imiquimod, 5-fluorouracil).",
+    "prevention": "Daily sunscreen use (SPF 30+), protective clothing, avoid tanning beds, regular skin self-examination, annual dermatology check-ups.",
+    "disclaimer": "⚠️ This is a preliminary screening tool only. Do NOT panic - BCC is highly treatable, especially when caught early. A dermatologist must confirm diagnosis with biopsy and determine the best treatment approach for you."
+  },
+  "bkl": {
+    "full_name": "Benign Keratosis",
+    "severity": "Low - Non-cancerous",
+    "description": "Benign Keratosis, also called seborrheic keratosis, is a common, non-cancerous skin growth. These are harmless, though they may be removed for cosmetic reasons or if they become irritated.",
+    "causes": "Natural skin aging process. More common in middle-aged and older individuals. Associated with genetic predisposition and sun exposure.",
+    "symptoms": "Waxy, raised bumps that are brown, black, or tan colored. May appear scaly and have a warty texture. Usually painless unless irritated by clothing or scratching.",
+    "treatment": "No medical treatment needed as they are benign. Can be removed for cosmetic reasons using cryotherapy, curettage, laser therapy, or chemical peels. Home remedies are not recommended.",
+    "prevention": "Sun protection may slow the appearance of new growths. Regular skin checks help monitor for any changes or new growths.",
+    "disclaimer": "✅ This appears to be a benign (non-cancerous) lesion. However, professional confirmation is important. Schedule a dermatology visit to ensure proper diagnosis and discuss options if removal is desired."
+  },
+  "df": {
+    "full_name": "Dermatofibroma",
+    "severity": "Low - Non-cancerous",
+    "description": "Dermatofibroma is a benign skin tumor that develops in the dermis (deeper skin layer). These firm nodules are harmless and very common, though they may appear cosmetically undesirable.",
+    "causes": "Exact cause unknown, but may develop after minor skin trauma or injury. Not related to sun exposure. More common in women and those with darker skin tones.",
+    "symptoms": "Firm, dome-shaped bump, typically brown or reddish. Often has a dimple in the center. Usually painless, though may itch occasionally. Commonly found on legs.",
+    "treatment": "Dermatofibromas don't require treatment as they're benign. Can be surgically excised if cosmetically bothersome, though scarring may result. Cryotherapy and laser therapy have limited effectiveness.",
+    "prevention": "No prevention, as cause is unknown. Avoid picking or irritating existing lesions.",
+    "disclaimer": "✅ Low-risk benign lesion. Permanent removal by surgery may cause scarring, so discuss with dermatologist. Many choose to leave them untreated as they pose no health risk."
+  },
+  "mel": {
+    "full_name": "Melanoma",
+    "severity": "Very High - Most Dangerous Skin Cancer",
+    "description": "Melanoma is the most serious type of skin cancer, originating from melanocytes. Early detection and treatment are critical for survival. This requires immediate professional evaluation.",
+    "causes": "Caused by excessive sun exposure, especially severe sunburns in childhood. Also associated with fair skin, family history, numerous moles, and genetic mutations.",
+    "symptoms": "Use ABCDE rule: Asymmetry, Border irregularity, Color variation, Diameter >6mm, Evolving (changing). May also have ulceration, bleeding, itching, or tenderness.",
+    "treatment": "Surgical excision with wide margins is primary treatment. May require additional therapies: sentinel lymph node biopsy, immunotherapy, targeted therapy, chemotherapy, or radiation depending on stage.",
+    "prevention": "Strict sun protection: daily SPF 30+ sunscreen, protective clothing, avoid peak sun hours (10 AM-4 PM), no tanning beds. Monthly skin self-exams and annual professional skin checks.",
+    "disclaimer": "🚨 URGENT: This requires IMMEDIATE dermatological evaluation. Do NOT delay seeking professional medical care. Early-stage melanoma has excellent prognosis when treated promptly. Time is critical - schedule an appointment TODAY with a board-certified dermatologist or oncologist."
+  },
+  "nv": {
+    "full_name": "Melanocytic Nevus (Mole)",
+    "severity": "Low - Non-cancerous (Normal)",
+    "description": "A melanocytic nevus is a common benign mole composed of clusters of melanocytes. These are very common and typically non-threatening, though any change should be monitored.",
+    "causes": "Genetic predisposition and cumulative sun exposure. Very common in people of all skin types. More common with increasing age.",
+    "symptoms": "Brown, tan, or black circular or oval bump. May be flat or raised. Usually uniform color and border. Present throughout life or develop over time.",
+    "treatment": "No treatment needed for benign moles. Can be removed for cosmetic reasons via shaving, surgical excision, or laser therapy. Removal may prevent monitoring for changes.",
+    "prevention": "Sun protection may reduce development of new moles. Regular monitoring helps detect any concerning changes early.",
+    "disclaimer": "✅ This appears to be a normal, benign mole. Continue regular self-monitoring using the ABCDE rule and see a dermatologist if you notice any changes in shape, size, color, or symptoms."
+  },
+  "vasc": {
+    "full_name": "Vascular Lesion",
+    "severity": "Low - Non-cancerous",
+    "description": "Vascular lesions are benign growths formed by blood vessels. These include angiomas and spider veins. Most are harmless and pose no health risk, though they may bleed if traumatized.",
+    "causes": "Genetic predisposition. Not caused by sun exposure. More common with age, hormonal changes, and liver disease. Some present from birth.",
+    "symptoms": "Red, purple, or blue lesions composed of abnormal blood vessel growth. May blanch with pressure. Usually painless unless irritated or bleeding.",
+    "treatment": "Not medically necessary. Can be removed for cosmetic reasons using laser therapy, cryotherapy, or sclerotherapy. Removal is optional.",
+    "prevention": "No prevention, as cause is primarily genetic. Avoid trauma to lesions which may cause bleeding.",
+    "disclaimer": "✅ This appears to be a benign vascular lesion. Professional confirmation recommended. Discuss treatment options with dermatologist if cosmetic improvement is desired. Most require no treatment."
+  }
+}

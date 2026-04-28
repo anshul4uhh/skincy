@@ -1,0 +1,20 @@
+# Render Deployment Configuration
+services:
+  - type: web
+    name: dermis-detect-backend
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "true"
+      - key: HF_TOKEN
+        scope: secret
+        description: "HuggingFace API token for ViT model access"
+      - key: OPENROUTER_API_KEY
+        scope: secret
+        description: "OpenRouter API key for LLM chat functionality"

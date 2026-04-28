@@ -1,0 +1,1 @@
+{"model_name": "resnet50", "num_classes": 7, "dropout": 0.3, "training_type": "fine_tuned", "base_model": "focal_loss_trained"}
