@@ -6,7 +6,7 @@ from huggingface_hub import InferenceClient
 
 # ================== Environment ==================
 
-VIT_REPO_ID = os.getenv("VIT_REPO_ID", "Anshul518/dermis-detect-vit-large")
+VIT_REPO_ID = os.getenv("VIT_REPO_ID", "Kuldeepmishra3/vit-large-skin-cancer-ham10000")
 
 # Safe token handling
 _hf_token = os.getenv("HF_TOKEN", "").strip()
