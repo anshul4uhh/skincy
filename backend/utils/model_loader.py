@@ -1,23 +1,16 @@
 """Model loading utilities for Dermis-Detect - Using HuggingFace Inference API."""
 
-import json
-from pathlib import Path
 import os
-from huggingface_hub import InferenceClient  # ✅ FIXED IMPORT
 import threading
+from huggingface_hub import InferenceClient
 
 # ================== Environment ==================
 
 VIT_REPO_ID = os.getenv("VIT_REPO_ID", "Anshul518/dermis-detect-vit-large")
 
-# Handle empty token safely
+# Safe token handling
 _hf_token = os.getenv("HF_TOKEN", "").strip()
 HF_TOKEN = _hf_token if _hf_token else None
-
-# Cache directory
-CACHE_DIR = Path(__file__).parent.parent / ".model_cache"
-CACHE_DIR.mkdir(exist_ok=True)
-
 
 # ================== Config Loaders ==================
 
@@ -46,19 +39,19 @@ def load_disease_info():
         "mel": {
             "full_name": "Melanoma",
             "severity": "High",
-            "description": "A type of skin cancer that develops from melanocytes.",
-            "causes": "Excessive sun exposure, genetic predisposition",
-            "symptoms": "Irregular moles, color variation, asymmetry",
+            "description": "Skin cancer from melanocytes.",
+            "causes": "Sun exposure, genetics",
+            "symptoms": "Irregular mole, color variation",
             "treatment": "Surgery, immunotherapy",
-            "prevention": "Sun protection, regular checks"
+            "prevention": "Sun protection"
         },
         "bcc": {
             "full_name": "Basal Cell Carcinoma",
             "severity": "Medium",
-            "description": "Most common skin cancer.",
+            "description": "Common skin cancer.",
             "causes": "Sun exposure",
-            "symptoms": "Pearly bump, bleeding lesion",
-            "treatment": "Surgery, radiation",
+            "symptoms": "Pearly bump",
+            "treatment": "Surgery",
             "prevention": "Sun protection"
         },
         "akiec": {
@@ -73,9 +66,9 @@ def load_disease_info():
         "nv": {
             "full_name": "Melanocytic Nevi",
             "severity": "Low",
-            "description": "Benign moles.",
-            "causes": "Genetic",
-            "symptoms": "Brown spots",
+            "description": "Benign mole.",
+            "causes": "Genetics",
+            "symptoms": "Brown spot",
             "treatment": "None",
             "prevention": "Monitoring"
         },
@@ -84,16 +77,16 @@ def load_disease_info():
             "severity": "Low",
             "description": "Non-cancerous growth.",
             "causes": "Age-related",
-            "symptoms": "Scaly skin",
+            "symptoms": "Scaly patch",
             "treatment": "Optional removal",
             "prevention": "Checkups"
         },
         "df": {
             "full_name": "Dermatofibroma",
             "severity": "Low",
-            "description": "Benign skin growth.",
+            "description": "Benign bump.",
             "causes": "Unknown",
-            "symptoms": "Firm bump",
+            "symptoms": "Firm lump",
             "treatment": "None",
             "prevention": "N/A"
         },
@@ -101,8 +94,8 @@ def load_disease_info():
             "full_name": "Vascular Lesion",
             "severity": "Low",
             "description": "Blood vessel lesion.",
-            "causes": "Vascular issues",
-            "symptoms": "Red/purple marks",
+            "causes": "Vascular issue",
+            "symptoms": "Red/purple mark",
             "treatment": "Laser",
             "prevention": "N/A"
         }
@@ -127,13 +120,6 @@ CLASS_MAPPING = None
 DISEASE_INFO = None
 MODEL_INFO = None
 
-# Dummy flags (compatibility)
-MODEL_LOADED = True
-VIT_MODEL_LOADED = True
-MODEL = None
-VIT_MODEL = None
-VIT_PROCESSOR = None
-
 # ================== Initialization ==================
 
 def _initialize_hf_client():
@@ -148,11 +134,10 @@ def _initialize_hf_client():
             timeout=30
         )
 
-        # ✅ Test connection (IMPORTANT)
-        HF_CLIENT.get_model_status()
-
+        # ✅ No fake method call — just mark ready
         HF_CLIENT_READY = True
-        print("✓ HF client ready!")
+
+        print("✓ HuggingFace client ready!")
 
     except Exception as e:
         print(f"✗ HF client error: {e}")
@@ -171,7 +156,7 @@ def _load_config_background():
     print("✓ Config loaded")
 
 
-# ================== Start Threads ==================
+# ================== Start Background Init ==================
 
 print("=" * 70)
 print("DERMIS-DETECT: Using HuggingFace Inference API")
