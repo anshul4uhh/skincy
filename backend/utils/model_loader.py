@@ -1,7 +1,6 @@
 """Model loading utilities for Dermis-Detect - Using HuggingFace Inference API."""
 
 import json
-import torch
 from pathlib import Path
 import os
 from huggingface_hub import InferenceClient  # ✅ FIXED IMPORT
@@ -19,8 +18,6 @@ HF_TOKEN = _hf_token if _hf_token else None
 CACHE_DIR = Path(__file__).parent.parent / ".model_cache"
 CACHE_DIR.mkdir(exist_ok=True)
 
-# Device (kept for compatibility)
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # ================== Config Loaders ==================
 
